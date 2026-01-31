@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at top, #1b2b52, #0b1020);
+  color: #ffffff;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Glass Card */
+.container {
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.12),
+    rgba(255,255,255,0.05)
+  );
+  backdrop-filter: blur(14px);
+  border-radius: 24px;
+  padding: 2.5rem 2rem;
+  width: 100%;
+  max-width: 420px;
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.45),
+    inset 0 0 0 1px rgba(255,255,255,0.15);
+}
+
+/* Title */
+h1 {
+  text-align: center;
+  margin-bottom: 1.6rem;
+  font-size: 2.2rem;
+  letter-spacing: 1.2px;
+}
+
+/* Timer Display */
+.display {
+  font-size: 3.6rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 1.6rem 0 2rem;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 2px;
+  padding: 1.2rem;
+  border-radius: 18px;
+  background: rgba(0,0,0,0.35);
+  box-shadow:
+    inset 0 0 20px rgba(0,183,255,0.35),
+    0 0 25px rgba(0,183,255,0.25);
+}
+
+/* Buttons */
+.controls {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 0.85rem 1.8rem;
+  font-size: 1.05rem;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  min-width: 110px;
+  transition: all 0.25s ease;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.35);
+}
+
+button:hover {
+  transform: translateY(-2px) scale(1.03);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Button Colors */
+#startBtn {
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+  color: #fff;
+}
+
+#pauseBtn {
+  background: linear-gradient(135deg, #f1c40f, #e67e22);
+  color: #000;
+}
+
+#lapBtn {
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: #fff;
+}
+
+#resetBtn {
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  color: #fff;
+}
+
+/* Laps Section */
+.laps-container {
+  margin-top: 2rem;
+  background: rgba(0,0,0,0.35);
+  border-radius: 16px;
+  padding: 1rem;
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+.laps-container h3 {
+  margin-bottom: 1rem;
+  text-align: center;
+  letter-spacing: 1px;
+  opacity: 0.9;
+}
+
+/* Lap Items */
+.lap-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lap-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 1rem;
+  margin-bottom: 0.6rem;
+  border-radius: 12px;
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.12),
+    rgba(255,255,255,0.04)
+  );
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+  font-size: 1.05rem;
+}
+
+.lap-number {
+  opacity: 0.85;
+}
+
+.lap-time {
+  font-family: 'Courier New', monospace;
+}
+
+.lap-diff {
+  color: #7fd7ff;
+  min-width: 80px;
+  text-align: right;
+}
+
+/* Scrollbar */
+.laps-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.laps-container::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.25);
+  border-radius: 10px;
+}
